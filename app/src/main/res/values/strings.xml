@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PowertechAppMobil</string>
+    <string name="InicioFragmento">MenuFragmento</string>
+    <string name="ConfiguracionesFragmento">CarritoFragmento</string>
+    <string name="FavoritosFragmento">ServiciosFragmento</string>
+    <string name="Configuraciones2Fragmento">Fragmento de Configuraciones</string>
+    <string name="ItemInicio">menu</string>
+    <string name="ItemFavoritos">carrito</string>
+    <string name="ItemConfiguraciones">Servicios</string>
+</resources>
