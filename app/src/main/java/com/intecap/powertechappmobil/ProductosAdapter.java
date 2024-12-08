@@ -1,5 +1,6 @@
 package com.intecap.powertechappmobil;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,23 +14,29 @@ import java.util.List;
 
 public class ProductosAdapter extends RecyclerView.Adapter<ProductosAdapter.ViewHolder> {
 
-    private List<ModeloProducto> productos = new ArrayList<>();
+    private List<ModeloProducto> productos;
+    private Context context;
 
-    public ProductosAdapter(List<ModeloProducto> productos) {
-        this.productos = productos;
+    // Constructor
+    public ProductosAdapter(Context context, List<ModeloProducto> productos) {
+        this.context = context;
+        this.productos = productos != null ? productos : new ArrayList<>();
     }
 
     @NonNull
     @Override
-    public ProductosAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_producto, parent, false);
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(context).inflate(R.layout.item_producto, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.txtNombre.setText(productos.get(position).getNombreProducto());
-        holder.txtPrecio.setText(String.valueOf(productos.get(position).getPrecioProducto()));
+        ModeloProducto producto = productos.get(position);
+
+        // Configurar datos
+        holder.txtNombre.setText(producto.getNombreProducto());
+        holder.txtPrecio.setText(String.valueOf(producto.getPrecioProducto()));
     }
 
     @Override
@@ -37,8 +44,7 @@ public class ProductosAdapter extends RecyclerView.Adapter<ProductosAdapter.View
         return productos.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView txtNombre, txtPrecio;
 
         public ViewHolder(@NonNull View itemView) {

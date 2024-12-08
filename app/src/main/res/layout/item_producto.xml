@@ -7,7 +7,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="95dp"
+        android:layout_height="200dp"
         android:layout_margin="8dp"
         app:cardCornerRadius="5dp"
         app:cardElevation="5dp">
@@ -24,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
-                android:src="@drawable/ImagenProducto"/>
+                android:src="@drawable/imagen_producto"/>
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
