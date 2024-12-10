@@ -6,12 +6,12 @@
     android:padding="16dp"
     android:gravity="center">
 
-    <!-- Contenedor para los 3 ítems en forma de triángulo -->
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="300dp">
 
-        <!-- Ítem superior -->
+
         <LinearLayout
             android:id="@+id/item_top"
             android:layout_width="wrap_content"
@@ -34,7 +34,7 @@
                 android:gravity="center" />
         </LinearLayout>
 
-        <!-- Ítem izquierdo -->
+
         <LinearLayout
             android:id="@+id/item_left"
             android:layout_width="wrap_content"
@@ -58,7 +58,7 @@
                 android:gravity="center" />
         </LinearLayout>
 
-        <!-- Ítem derecho -->
+
         <LinearLayout
             android:id="@+id/item_right"
             android:layout_width="wrap_content"
@@ -83,7 +83,7 @@
         </LinearLayout>
     </RelativeLayout>
 
-    <!-- Lista de texto para seleccionar opciones -->
+
     <TextView
         android:id="@+id/txt_list"
         android:layout_width="match_parent"
@@ -96,7 +96,7 @@
         android:textColor="@android:color/black"
         android:textSize="18sp" />
 
-    <!-- Botón de confirmación -->
+
     <Button
         android:id="@+id/btn_confirm"
         android:layout_width="match_parent"
